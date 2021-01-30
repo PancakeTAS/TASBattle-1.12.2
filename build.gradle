@@ -1,0 +1,41 @@
+plugins {
+    id 'java-library'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+group = 'work.mgnet'
+version = '1.0'
+description = 'This is the TAS Battle Plugin for Sponge. Requires WE'
+
+repositories {
+
+    jcenter()
+    maven {
+    	name = 'enginehub-repo'
+    	url = 'https://maven.enginehub.org/repo/'
+    }
+    maven { url 'http://ci.athion.net/job/FastAsyncWorldEdit/ws/mvn/' }
+    maven {
+        name = 'sponge-repo'
+        url = 'https://repo.spongepowered.org/maven'
+    }
+    
+}
+
+dependencies {
+    api 'org.apache.commons:commons-math3:3.6.1'
+
+    implementation 'com.google.guava:guava:28.2-jre'
+
+    testImplementation 'junit:junit:4.12'
+    
+    compile 'org.spongepowered:spongeapi:7.2.0'
+    
+    compile 'com.boydti:fawe-api:latest'
+    
+    compile 'com.sk89q.worldedit:worldedit-core:6.1'
+    
+    compile 'com.sk89q.worldedit:worldedit-sponge:6.1.7-SNAPSHOT'
+    
+}
